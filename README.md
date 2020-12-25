@@ -13,4 +13,6 @@ df1 = pd.read_excel(r"Caminho do arquivo.xlsx")
 Executando a busca utilizando um merge dos arquivos:
 df=df.merge(df1, on=['Coluna que quero buscar'], how='outer', suffixes=['', '_'], indicator=True)
 
+
+
 As colunas devem ter o mesmo nome!
