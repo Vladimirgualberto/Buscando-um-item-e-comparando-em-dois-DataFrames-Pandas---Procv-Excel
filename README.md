@@ -24,7 +24,7 @@ df = pd.read_csv(r"Caminho do arquivo")
 df1 = pd.read_excel(r"Caminho do arquivo")
 
 
-df=df.merge(df1, on=['TELEFONE'], how='outer', suffixes=['', '_'], indicator=True)
+df=df.merge(df1, on=['Coluna que queremos buscar'], how='outer', suffixes=['', '_'], indicator=True)
 
 df = df.rename(columns={'_merge': 'Existe em Qual Local?'})
 df["Existe em Qual Local?"] = df["Existe em Qual Local?"].replace(['left_only'], 'Encontrado apenas na A')
