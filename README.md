@@ -15,6 +15,26 @@ df=df.merge(df1, on=['Coluna que quero buscar'], how='outer', suffixes=['', '_']
 
 ![alt tag](https://github.com/Vladimirgualberto/Buscando-um-item-e-comparando-em-dois-DataFrames-Pandas---Procv-Excel/blob/main/img/compara%C3%A7%C3%A3o.png?raw=true)
 
+
+# Código 
+
+
+```
+df = pd.read_csv(r"Caminho do arquivo")
+df1 = pd.read_excel(r"Caminho do arquivo")
+
+
+df=df.merge(df1, on=['TELEFONE'], how='outer', suffixes=['', '_'], indicator=True)
+
+df = df.rename(columns={'_merge': 'Existe em Qual Local?'})
+df["Existe em Qual Local?"] = df["Existe em Qual Local?"].replace(['left_only'], 'Encontrado apenas na A')
+df["Existe em Qual Local?"] = df["Existe em Qual Local?"].replace(['both'], 'Existe nos dois')
+df["Existe em Qual Local?"] = df["Existe em Qual Local?"].replace(['right_only'], 'Encontrado apenas no B')
+
+df.to_excel("comparativo.xlsx")
+```
+
+
 As colunas devem ter o mesmo nome!
 
 Como seria essa busca sem utilizar a biblioteca do Pandas ou outra biblioteca do Python? utilizando um for encadeado, por exemplo.
