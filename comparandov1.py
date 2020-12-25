@@ -5,8 +5,8 @@ import openpyxl
 ##Local lib
 
 
-df = pd.read_csv(r"C:\Users\Vladimir\PycharmProjects\comparandoarquivos\nextip2.csv")
-df1 = pd.read_excel(r"C:\Users\Vladimir\PycharmProjects\comparandoarquivos\syonet.xlsx")
+df = pd.read_csv(r"Caminho do arquivo.csv")
+df1 = pd.read_excel(r"Caminho do arquivo.xlsx")
 df = df.rename(columns={'dst': 'TELEFONE'})
 df =df.drop(columns=['realsrc'])
 
@@ -17,9 +17,6 @@ df["Existe em Qual Local?"] = df["Existe em Qual Local?"].replace(['left_only'],
 df["Existe em Qual Local?"] = df["Existe em Qual Local?"].replace(['both'], 'Existe nos dois')
 df["Existe em Qual Local?"] = df["Existe em Qual Local?"].replace(['right_only'], 'Encontrado apenas no Syonet')
 
-
-
-#df['Existe Na Central?']=np.where(df['Destino'] == df1['Destino'], 'Existe', 'NãoExiste')
 
 df.to_excel("comparativo.xlsx")
 
