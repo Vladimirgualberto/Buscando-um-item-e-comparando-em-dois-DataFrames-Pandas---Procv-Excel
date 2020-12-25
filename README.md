@@ -30,7 +30,7 @@ Neste exemplo criei uma coluna 'Existe' dentro do primeiro dataframe
 
 
 # Markdown
-´´´
+```
 for i in df['Coluna que quero buscar']:
 
     for j in df1['Coluna que quero buscar ou comparar']:
@@ -44,4 +44,4 @@ for i in df['Coluna que quero buscar']:
        else:
        
            df.loc[i,'Existe'] = 'Não Existe'
-´´´
+```
