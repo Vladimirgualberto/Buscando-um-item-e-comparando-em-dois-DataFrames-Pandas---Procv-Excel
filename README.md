@@ -17,7 +17,7 @@ df=df.merge(df1, on=['Coluna que quero buscar'], how='outer', suffixes=['', '_']
 
 As colunas devem ter o mesmo nome!
 
-Como seria essa busca sem utilizar a biblioteca do Pandas? utilizando um for encadeado, por exemplo.
+Como seria essa busca sem utilizar a biblioteca do Pandas ou outra biblioteca do Python? utilizando um for encadeado, por exemplo.
 
 
 Abrindo o Arquivo A:
