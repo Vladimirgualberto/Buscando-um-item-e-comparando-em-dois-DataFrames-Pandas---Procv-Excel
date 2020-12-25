@@ -13,6 +13,9 @@ df1 = pd.read_excel(r"Caminho do arquivo.xlsx")
 Executando a busca utilizando um merge dos arquivos:
 df=df.merge(df1, on=['Coluna que quero buscar'], how='outer', suffixes=['', '_'], indicator=True)
 
+![alt text](https://github.com/vladimirgualberto/Buscando-um-item-e-comparando-em-dois-DataFrames-Pandas---Procv-Excel
+/blob/[branch]/comparação.jpg?raw=true)
 
+![alt tag](https://github.com/Vladimirgualberto/Buscando-um-item-e-comparando-em-dois-DataFrames-Pandas---Procv-Excel/blob/main/img/compara%C3%A7%C3%A3o.png?raw=true)
 
 As colunas devem ter o mesmo nome!
