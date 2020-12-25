@@ -29,9 +29,15 @@ df1 = pd.read_excel(r"Caminho do arquivo.xlsx")
 Neste exemplo criei uma coluna 'Existe' dentro do primeiro dataframe
 
 for i in df['Coluna que quero buscar']:
+
     for j in df1['Coluna que quero buscar ou comparar']:
+    
        if i == j:
+       
         df.loc[i,'Existe'] = 'Existe'
+        
         break
+        
        else:
+       
            df.loc[i,'Existe'] = 'Não Existe'
